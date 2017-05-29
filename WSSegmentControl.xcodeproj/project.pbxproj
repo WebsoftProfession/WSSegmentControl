@@ -15,6 +15,8 @@
 		605CBF201E51D2A900A17113 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 605CBF1E1E51D2A900A17113 /* LaunchScreen.storyboard */; };
 		605CBF2B1E51D2AB00A17113 /* WSSegmentControlTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 605CBF2A1E51D2AB00A17113 /* WSSegmentControlTests.m */; };
 		605CBF361E51D2AB00A17113 /* WSSegmentControlUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 605CBF351E51D2AB00A17113 /* WSSegmentControlUITests.m */; };
+		605CBF451E51D35600A17113 /* WSSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 605CBF441E51D35600A17113 /* WSSegmentView.m */; };
+		605CBF491E51D3AF00A17113 /* WSSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = 605CBF481E51D3AF00A17113 /* WSSegment.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,10 @@
 		605CBF311E51D2AB00A17113 /* WSSegmentControlUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WSSegmentControlUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		605CBF351E51D2AB00A17113 /* WSSegmentControlUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WSSegmentControlUITests.m; sourceTree = "<group>"; };
 		605CBF371E51D2AB00A17113 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		605CBF431E51D35600A17113 /* WSSegmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSSegmentView.h; sourceTree = "<group>"; };
+		605CBF441E51D35600A17113 /* WSSegmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSSegmentView.m; sourceTree = "<group>"; };
+		605CBF471E51D3AF00A17113 /* WSSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSSegment.h; sourceTree = "<group>"; };
+		605CBF481E51D3AF00A17113 /* WSSegment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSSegment.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +107,7 @@
 		605CBF0F1E51D2A800A17113 /* WSSegmentControl */ = {
 			isa = PBXGroup;
 			children = (
+				605CBF461E51D35C00A17113 /* WSSegment */,
 				605CBF131E51D2A800A17113 /* AppDelegate.h */,
 				605CBF141E51D2A800A17113 /* AppDelegate.m */,
 				605CBF161E51D2A900A17113 /* ViewController.h */,
@@ -138,6 +145,17 @@
 				605CBF371E51D2AB00A17113 /* Info.plist */,
 			);
 			path = WSSegmentControlUITests;
+			sourceTree = "<group>";
+		};
+		605CBF461E51D35C00A17113 /* WSSegment */ = {
+			isa = PBXGroup;
+			children = (
+				605CBF431E51D35600A17113 /* WSSegmentView.h */,
+				605CBF441E51D35600A17113 /* WSSegmentView.m */,
+				605CBF471E51D3AF00A17113 /* WSSegment.h */,
+				605CBF481E51D3AF00A17113 /* WSSegment.m */,
+			);
+			name = WSSegment;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,10 +221,11 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0820;
-				ORGANIZATIONNAME = Dotsquares;
+				ORGANIZATIONNAME = WebsoftProfession;
 				TargetAttributes = {
 					605CBF0C1E51D2A800A17113 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 5NBYKWJL2V;
 						ProvisioningStyle = Automatic;
 					};
 					605CBF251E51D2AB00A17113 = {
@@ -275,7 +294,9 @@
 			files = (
 				605CBF181E51D2A900A17113 /* ViewController.m in Sources */,
 				605CBF151E51D2A800A17113 /* AppDelegate.m in Sources */,
+				605CBF451E51D35600A17113 /* WSSegmentView.m in Sources */,
 				605CBF121E51D2A800A17113 /* main.m in Sources */,
+				605CBF491E51D3AF00A17113 /* WSSegment.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,7 +445,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5NBYKWJL2V;
 				INFOPLIST_FILE = WSSegmentControl/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = TD.WSSegmentControl;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -435,7 +458,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5NBYKWJL2V;
 				INFOPLIST_FILE = WSSegmentControl/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = TD.WSSegmentControl;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -507,6 +532,7 @@
 				605CBF3C1E51D2AB00A17113 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		605CBF3D1E51D2AB00A17113 /* Build configuration list for PBXNativeTarget "WSSegmentControlTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +541,7 @@
 				605CBF3F1E51D2AB00A17113 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		605CBF401E51D2AB00A17113 /* Build configuration list for PBXNativeTarget "WSSegmentControlUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +550,7 @@
 				605CBF421E51D2AB00A17113 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

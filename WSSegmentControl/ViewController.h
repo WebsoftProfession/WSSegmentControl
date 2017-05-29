@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WSSegmentView.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<WSSegmentDelegate>
 
-
+{
+    __weak IBOutlet WSSegmentView *wsSegment;
+}
 @end
 
